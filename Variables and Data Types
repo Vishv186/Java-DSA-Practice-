@@ -1,0 +1,29 @@
+/* 
+VARIABLES:
+Variables are used to store data. It is container that holds value that can change during program's execution. 
+
+Types of Varaibles:
+  1]Local Variable 
+    It is declared inside a method, constructor or block.
+  2]Instance Variable
+    It is declared inside class but outside methods, constructor/block.
+  3]Static Variable 
+    It is declared using static keyword inside a class but outside methods/blocks
+*/
+
+/*
+Data Types:
+  1]Primitive
+    These are the basic building blocks that store simple values directly in memory. Ex:- Boolean, Byte, Char, Short, Int, Long, Float, Double
+  2]Non-Primitive
+    These are reference types that store memory addresses of objects. Used to store complex Data types.
+    Types of Non-Primitive:
+      1]Class
+        It represents the set of properties or methods that are common to all objects of one type.
+      2]Interface
+        It is the blueprint of the class.
+      3]Array
+        It is collection of element of same type.
+      4]String
+        A sequence of characters or an array of characters.
+*/
