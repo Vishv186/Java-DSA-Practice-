@@ -1,0 +1,16 @@
+/* 
+Time Complexity :-
+Algorithm quantifying the amount of time taken by an algoritm to run as a function of the length of the input.
+
+Types of Notations :- 
+  1] O-Notation(Big O)
+      Represents the upper bound of an algorithm's time complexity in worst-case scenario.
+  2] Ω-Notation(Omega)
+      Represents the lower bound of an algorithm's time complexity in best-case scenario.
+  3] Θ-Notation(Theta)
+      Represents the tight bound of an algorithm, capturing both upper and lower bounds.
+
+Space Complexity :-
+Algorithm quantifying the amount of time taken by a program to run as a function of length of the input.
+
+*/
