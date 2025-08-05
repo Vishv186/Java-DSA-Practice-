@@ -1,0 +1,28 @@
+/* Arrays:- Arrays in Java are collection of elements of the same data type stored in contigous memory locations.
+      format:- type[] arrayName = new type(size)
+      ex:- int[] marks = new int(3);
+
+Indexing of Arrays :-
+   0 , 1, 2, 3, 4, 5, 6, 7, 8
+
+Example :- */
+
+
+public class git{
+    public static void main(String[] args) {
+        int[] marks = new int[3];
+        marks[0] = 45;
+        marks[1] = 12;
+        marks[2] = 89;
+
+        // System.out.println(marks[0]);
+        // System.out.println(marks[1]);
+        // System.out.println(marks[2]);
+
+        //OR
+
+        for(int i=0; i<3; i++){
+            System.out.println(marks[i]);
+        }
+    }
+}
