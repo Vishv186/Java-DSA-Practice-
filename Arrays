@@ -26,3 +26,13 @@ public class git{
         }
     }
 }
+
+
+
+/*
+2D Arrays :- It is array, where data is stored in rows and columns forming a matrix like structure.
+      Format:- type[][] arrayName = new type[rows][columns];
+      Example:- int[][] numbers = new int[3][5];
+
+
+*/
