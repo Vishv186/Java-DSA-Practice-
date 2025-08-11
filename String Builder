@@ -2,3 +2,29 @@
 StringBuilder :- Java StringBuilder class is class used to create mutable(modifiable) String.
 */
 
+
+public class git{
+    public static void main(String[] args) {
+        
+        StringBuilder name = new StringBuilder("Vishv");
+
+        System.out.println(name.charAt(2));
+
+        name.setCharAt(0, 'P');                 //setCharAt
+        System.out.println(name);
+
+        name.insert(1, 'i');                    //insert
+        System.out.println(name);
+
+        name.delete(1,2);                       //delete
+        System.out.println(name); 
+
+        name.append(" ");                       //append
+        name.append("N");
+        name.append("a");
+        name.append("g");
+        name.append("d");
+        name.append("e");
+        System.out.println(name);
+    }
+}
