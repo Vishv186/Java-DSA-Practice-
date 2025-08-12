@@ -6,4 +6,184 @@ Opreators in Java
     - Unary :- ++ , --
 
 2] Relational Opreators 
+    - == -> equals to 
+    - != -> not equal to 
+     - > -> greater than
+    - < -> smaller than
+    - >= -> greater than equal to
+    - <= -> smaller than equal to
+
+3] Logical Opreators 
+    - && -> Logical AND
+    - || -> Logical OR
+    - ! -> Logical NOT
+
+4] Bitwise Opreators
+    - & -> Binary AND 
+    - | -> Binary OR
+    - ^ -> Binary XOR
+    - ~ -> Binary One's complement
+    - << -> Binary Left Shift 
+    - >> -> Binary Right Shift 
+
+5] Assignment Opreators
+    - = -> (if A=B, it means A=5)
+    - += -> (if A+=B, it means A=A+B)
+    - -= -> (if A-=B, it means A=A-B)
+    - *= -> (if A*=B, it means A=A*B)
+    - /= -> (if A/=B, it means A=A/B)
 */
+
+
+/*
+Bit Manipulation:-
+    - Left Shift
+        N<<i
+    - Right Shift
+        N>>i
+*/
+
+
+/*
+Bit Opreations:-
+    1] Get Bit
+        Retrieves bit at specific position.
+    2] Set Bit
+        Sets the ith bit to 1.
+    3] Clear Bit
+        Sets the ith bit to o.
+    4]Update Bit
+        Updates the ith bit to given value(o or 1).
+
+*/
+
+
+import java.util.*;
+
+public class Practice{
+    public static void main(String[] args){                      //GET Bit 
+        int n = 5;
+        int pos = 3;
+        int bitMask = 1<<pos;
+
+        if ((bitMask & n) = 0){
+            System.out.println("Bit was zero");
+        } else {
+            System.out.println("Bit was One");
+        }
+    }
+}
+
+ 
+import java.util.*;
+
+public class Practice{
+    public static void main(String[] args){                          //SET Bit
+        int n = 5;
+        int pos = 3;
+        int bitMask = 1<<pos;
+
+        int newNumber = bitMask | n;
+        System.out.println(newNumber);
+    }
+}
+
+
+import java.util.*;
+
+public class Practice{
+    public static void main(String[] args){                          //Clear Bit
+        int n = 5;
+        int pos = 3;
+        int bitMask = 1<<pos;
+        int notBitMask = ~(bitMask);
+
+        int newNumber = notBitMask & n;
+        System.out.println(newNumber);
+    }
+}
+
+
+import java.util.*;
+
+public class Practice{
+    public static void main(String[] args){                             //Update Bit
+        Scanner sc = new Scanner(System.in);
+        int oper = sc.nextInt();
+        int n = 5;
+        int pos = 1;
+        
+        int bitMask = 1<<pos;
+        if (oper == 1){
+            int newNumber = bitMask | n;
+            System.out.println(newNumber);
+        }else {
+            int newBitMask = ~(bitMask);
+            int newNumber = newBitMask & n;
+            System.out.println(newNumber);
+        }
+    }
+}
+
+
+ import java.util.*;
+
+public class Practice{
+    public static void main(String[] args){                          //SET Bit
+        int n = 5;
+        int pos = 3;
+        int bitMask = 1<<pos;
+
+        int newNumber = bitMask | n;
+        System.out.println(newNumber);
+    }
+}
+
+
+import java.util.*;
+
+public class Practice{
+    public static void main(String[] args){                          //Clear Bit
+        int n = 5;
+        int pos = 3;
+        int bitMask = 1<<pos;
+        int notBitMask = ~(bitMask);
+
+        int newNumber = notBitMask & n;
+        System.out.println(newNumber);
+    }
+}
+
+
+import java.util.*;
+
+public class Practice{
+    public static void main(String[] args){                             //Update Bit
+        Scanner sc = new Scanner(System.in);
+        int oper = sc.nextInt();
+        int n = 5;
+        int pos = 1;
+        
+        int bitMask = 1<<pos;
+        if (oper == 1){
+            int newNumber = bitMask | n;
+            System.out.println(newNumber);
+        }else {
+            int newBitMask = ~(bitMask);
+            int newNumber = newBitMask & n;
+            System.out.println(newNumber);
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
