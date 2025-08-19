@@ -1,0 +1,38 @@
+/*
+Recursion :- Technique where a method is continually calls itself to solve a problem that can be broken down into smaller, similar subproblems.
+*/
+
+public class git{
+    public static void printNum(int n){
+        if (n==6){                                      //-------Base Function
+            return;                                     //When the code reaches base function the process stops and target is achieved.
+        }
+        System.out.println(n);
+        printNum(n+1);
+    }
+
+    public static void main(String[] args){
+        int n=1;                                        //-----Recursion function
+        printNum(n);
+    }
+}
+
+
+
+
+
+
+public class git{
+    public static void printSum(int i , int n , int sum){
+        if(i==n){
+            sum += i;
+            System.out.println(sum);
+            return;
+        }
+        sum += i;
+        printSum(i+1, n, sum);
+    }
+    public static void main(String[] args) {
+        printSum(1, 10, 0);
+    }
+}
