@@ -1,3 +1,45 @@
 /*
 Sorting in Java
+
+1] Bubbe Sort :-
+  Steps: 1. Start with first element of array.
+         2. Compare current element with next element.
+         3. If current element is greater than next element,  swap them.
+         4. Move the next element and repeat steps 2 & 3 until end of array.
+         5. Repeat steps 1-4 until no more swaps are needed.
 */
+
+public class git{
+
+    public static void printArray(int arr[]) {
+        for (int i=0; i<arr.length; i++){
+            System.out.print(arr[i] + " ");
+        }
+        System.out.println();
+    }
+    public static void main(String[] args) {
+        int arr[] = {7,8,3,1,2};
+
+        for(int i=0; i<arr.length-1; i++){
+            for(int j=0; j<arr.length-i-1; j++){
+                if(arr[j]  > arr[j+1]){                         //Checks whether i at oth index is greater then i at 1st index.
+
+                    int temp = arr[j];                          //creates temp array at index 1
+                    arr[j] = arr[j+1];                          //replaces oth index integer with 1st index integer. 
+                    arr[j+1] = temp;                            //replaces 1st index integer with oth index integer.
+                }
+            }
+        }
+        printArray(arr);
+    }
+}
+
+/*
+2] 
+
+
+
+*/
+
+
+
