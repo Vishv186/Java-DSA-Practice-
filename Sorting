@@ -34,12 +34,188 @@ public class git{
     }
 }
 
+
+
 /*
-2] 
+2] Selection Sort :-
+    Steps :- 1. Find the minimum and swap with first element.
+             2. Find the next minimum and swap with second element.
+             3. Find the next minimum and swap with third element.
+             4. The array is sorted.
+*/
+
+public class git{
+    public static void printArray(int arr[]) {
+        for (int i=0; i<arr.length; i++){
+            System.out.print(arr[i] + " ");
+        }
+        System.out.println();
+    }
+
+    public static void main(String[] args) {
+        int arr[] = {7,8,3,1,2};
+
+        for(int i=0; i<arr.length-1; i++){
+            int smallest = i;
+            for(int j=i+1; j<arr.length; j++){
+                if(arr[smallest]  > arr[j]){
+                    smallest = j;                                              
+                }
+            }
+            int temp = arr[smallest];                        
+            arr[smallest] = arr[i];                          
+            arr[i] = temp;
+        }
+        printArray(arr);
+    }
+}
 
 
+
+/*
+3] Insertion Sort :-
+    Steps :- 1. Start with second element(ndex1) and compare it with first element.
+             2. If second element is smaller, shift first element to the right and insert the second element in it's correct position.
+             3. Move to the third element, compare it with the previous element and insert in the correct position by shifting elements if neccessary.
+             4. Repeat this process for all elements in the array until entire list is sorted.
+*/
+
+public class git{
+    public static void printArray(int arr[]) {
+        for (int i=0; i<arr.length; i++){
+            System.out.print(arr[i] + " ");
+        }
+        System.out.println();
+    }
+
+    public static void main(String[] args) {
+        int arr[] = {7,8,3,1,2};
+
+        for(int i=0; i<arr.length; i++){
+            int current = arr[i];
+            int j = i-1;
+            while(j>=0 && current < arr[j]){
+            arr[j+1] = arr[j];
+            j--;    
+            }
+
+            arr[j+1] = current;
+        }
+        printArray(arr);
+    }
+}
+
+
+
+/*
+4] Merge Sort :-
+    Steps :- 1. Divide - Split the array into two halves until each subarray conains one element.
+             2. Conquer - Recursively sort each half.
+             3. Merge - Combine sorted halves by comparing elements and merging them into single sorted array.
 
 */
 
+public class git {
+    public static void conquer(int arr[], int si, int mid, int ei) {
+        int merged[] = new int[ei - si + 1];
 
+        int idx1 = si;
+        int idx2 = mid + 1;
+        int x = 0;
+
+        while (idx1 <= mid && idx2 <= ei) { 
+            if (arr[idx1] <= arr[idx2]) {
+                merged[x++] = arr[idx1++];
+            } else {
+                merged[x++] = arr[idx2++];
+            }
+        }
+        while (idx1 <= mid) {
+            merged[x++] = arr[idx1++];
+        }
+        while (idx2 <= ei) {
+            merged[x++] = arr[idx2++];
+        }
+        for (int i = 0, j = si; i < merged.length; i++, j++) {
+            arr[j] = merged[i];
+        }
+    }
+
+    public static void divide(int arr[], int si, int ei) {
+        if (si >= ei) {
+            return;
+        }
+        int mid = si + (ei - si) / 2;
+        divide(arr, si, mid);
+        divide(arr, mid + 1, ei);
+        conquer(arr, si, mid, ei);
+    }
+
+    public static void main(String[] args) {
+        int arr[] = {6, 3, 9, 5, 2, 8};
+        int n = arr.length;
+
+        divide(arr, 0, n - 1);
+
+        for (int i = 0; i < n; i++) {
+            System.out.print(arr[i] + " ");
+        }
+        System.out.println();
+    }
+}
+
+
+
+/*
+5] Quick Sort :-
+    Steps :- 1. Select a pivot element from the array.
+             2. Partition the array such that 
+                  - Elemeants smaller than the pivot point go to the left.
+                  - Elements greater than the pivot go to the right.
+             3. Recursively apply Quick sort on the left and right subarrays.
+             4. Combine the sorted subarrays to get the final sorted arrays.
+
+*/
+
+public class git {
+    public static int partition(int arr[], int low, int high) {
+        int pivot = arr[high];
+        int i = low - 1;
+
+        for (int j = low; j < high; j++) {
+            if (arr[j] < pivot) {
+                i++;
+                int temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
+        }
+        i++;
+        int temp = arr[i];
+        arr[i] = pivot;
+        arr[high] = temp;
+        return i;
+    }
+
+    public static void quickSort(int arr[], int low, int high) {
+        if (low < high) {
+            int pivot = partition(arr, low, high);
+
+            quickSort(arr, low, pivot - 1);
+            quickSort(arr, pivot + 1, high);
+        }
+    }
+
+    public static void main(String[] args) {
+        int[] arr = {6, 3, 9, 5, 2, 8};
+        int n = arr.length;
+
+        quickSort(arr, 0, n - 1);
+
+        for (int i = 0; i < n; i++) {
+            System.out.print(arr[i] + " ");
+        }
+        System.out.println();
+    }
+}
 
