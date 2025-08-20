@@ -1,0 +1,24 @@
+//Arrays
+
+// 1] Find the largest element in the array.
+//    Given an array of integers nums, return the value of the largest element in the array.
+//  => Logic:- Declare first element in array as largest element and then use for loop to go through all 
+//             elements in array and using if check if any othe element is greater than than maxNum and replace
+//             the maxNum with the greates element in array.
+
+
+public class questions{
+    public static void main(String[] args){
+        int[] nums = {3, 3, 6, 1};                      //Given Array
+
+        int maxNum = nums[0];                           //This is to assume the first index element is largest
+
+        //Loop through the array
+        for (int i=1; i<nums.length; i++){
+            if(nums[i] > maxNum){                       // If any number is bigger than maxNum
+                maxNum =nums[i];                         // Replace the bigger element as maxNum
+            }
+        }
+        System.out.println("The largest element in Array is " + maxNum);
+    }
+}
