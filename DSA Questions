@@ -86,3 +86,36 @@ public class questions{
 
     }
 }
+
+
+
+
+
+// 4] Reverse an array
+//    Given an array nums, reverse the array in place.
+//    Logic :- Use two pointers: one at start, one at end. Swap them and move pointers inward until they meet. 
+
+public class questions {
+    public static void reverse(int[] nums) {
+        int left = 0;                // Pointer at start
+        int right = nums.length - 1; // Pointer at end
+        
+        // Swap until pointers meet
+        while (left < right) {
+            int temp = nums[left];   // Store left element
+            nums[left] = nums[right]; // Place right element at left
+            nums[right] = temp;      // Place stored element at right
+            
+            left++;   // Move left pointer forward
+            right--;  // Move right pointer backward
+        }
+    }
+
+    public static void main(String[] args) {
+        int[] nums = {1, 2, 3, 4, 5};
+        reverse(nums); // Array becomes reversed
+        for (int n : nums) {
+            System.out.print(n + " "); // Output: 5 4 3 2 1
+        }
+    }
+}
