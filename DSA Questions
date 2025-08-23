@@ -119,3 +119,41 @@ public class questions {
         }
     }
 }
+
+
+
+
+// 5] Remove duplicates in an array
+//    Given a sorted array nums, remove duplicates in-place such that each element appears only once. 
+//    Return the new length.
+// => Logic :- Use two pointers. One (j) tracks position of unique elements, other (i) scans array. When a 
+//             new unique element is found, move it to next position of j.
+
+public class questions {
+    public static int removeDuplicates(int[] nums) {
+        // Edge case: if array is empty
+        if (nums.length == 0) return 0;
+
+        int j = 0; // j is the index for unique elements
+
+        // Start from 1 because first element is always unique
+        for (int i = 1; i < nums.length; i++) {
+            // If new unique element is found
+            if (nums[i] != nums[j]) {
+                j++;             // Move j ahead
+                nums[j] = nums[i]; // Place unique element at j
+            }
+        }
+        return j + 1; // New length of array with unique elements
+    }
+
+    public static void main(String[] args) {
+        int[] nums = {1,1,2,2,3,3,4};
+        int newLength = removeDuplicates(nums);
+
+        // Print only the unique part
+        for (int i = 0; i < newLength; i++) {
+            System.out.print(nums[i] + " "); // Output: 1 2 3 4
+        }
+    }
+}
