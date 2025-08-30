@@ -240,6 +240,39 @@ public class questions{
 
 
 
+// 4] Find Non-Repeating character
+//    Find the first character in a string that does not repeat.
+//    Logic :- Count frequency of each char → return the first one with count 1.
+
+import java.util.*;
+
+public class questions{
+    public static void main(String[] args) {
+        String str = "swiss";
+
+        // Use LinkedHashMap to store frequency of each character
+         Map<Character, Integer> freq = new LinkedHashMap<>();
+
+         // Step 1: Count frequency of each character
+         for (char c : str.toCharArray()) {
+            freq.put(c, freq.getOrDefault(c, 0) + 1);
+        }
+
+        // find first non-repeating
+        char result = '_';
+        for (char c : freq.keySet()) {
+            if (freq.get(c) == 1) {
+                result = c;
+                break;
+            }
+        }
+
+        System.out.println("First Non-Repeating Character: " + result);
+    }
+}
+
+
+
 
 
 
