@@ -212,6 +212,31 @@ public class questions{
 
 
 
+// 3] Check if two Strings are Anagram.
+//    Two strings are anagrams if they contain the same characters in any order.
+//    Logic :- Sort both strings → if equal, they’re anagrams.
+
+import java.util.*;
+
+public class questions{
+    public static void main(String[] args) {
+        String s1 = "listen";                       //First Input String
+        String s2 = "silent";                       //Second Input String
+
+        // Convert both strings into character arrays because sorting is easier on arrays than strings.
+        char[] arr1 = s1.toCharArray();             
+        char[] arr2 = s2.toCharArray();
+
+        // Sort both character arrays alphabetically
+        Arrays.sort(arr1);
+        Arrays.sort(arr2);
+
+         // Compare sorted arrays
+        boolean isAnagram = Arrays.equals(arr1, arr2);
+        System.out.println("Are Anagrams? " + isAnagram);
+    }
+}
+
 
 
 
