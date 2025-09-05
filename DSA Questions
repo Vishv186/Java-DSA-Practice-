@@ -274,8 +274,42 @@ public class questions{
 
 
 
-5] 
+// 5] Longest Substring without repeating Characters
+//    Given a string, find the length of the longest substring without repeating characters.
+//    Logic:- Use sliding window + HashSet to track unique chars.
 
+import java.util.*;
+
+public class questions {
+    public static void main(String[] args) {
+        String str = "abcabcbb";  // input string
+
+        // HashSet will store characters of the current sliding window
+        Set<Character> set = new HashSet<>();
+
+        int left = 0;   // left pointer of sliding window
+        int maxLen = 0; // to keep track of longest substring length
+
+        // right pointer moves through the string
+        for (int right = 0; right < str.length(); right++) {
+
+            // If current character already exists in set,
+            // shrink the window from the left until duplicate is removed
+            while (set.contains(str.charAt(right))) {
+                set.remove(str.charAt(left)); // remove leftmost character
+                left++;                       // move left pointer forward
+            }
+
+            // Add the new character (unique) into the window
+            set.add(str.charAt(right));
+
+            // Update maximum length if current window is larger
+            maxLen = Math.max(maxLen, right - left + 1);
+        }
+
+        System.out.println("Longest Unique Substring Length: " + maxLen);
+    }
+}
 
 
 
